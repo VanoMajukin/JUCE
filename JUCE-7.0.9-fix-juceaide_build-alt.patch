@@ -1,0 +1,11 @@
+diff --color -urN JUCE-7.0.9/extras/Build/juceaide/Main.cpp JUCE-7.0.9_new/extras/Build/juceaide/Main.cpp
+--- JUCE-7.0.9/extras/Build/juceaide/Main.cpp	2023-11-20 17:14:32.000000000 +0300
++++ JUCE-7.0.9_new/extras/Build/juceaide/Main.cpp	2024-02-01 10:12:43.731270504 +0300
+@@ -569,6 +569,7 @@
+         catch (const juce::build_tools::SaveError& error)
+         {
+             juce::ConsoleApplication::fail (error.message);
++            return 1;
+         }
+     });
+ }
